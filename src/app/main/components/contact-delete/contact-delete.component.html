@@ -1,0 +1,8 @@
+<div class="contact-delete" @fadeIn *ngIf="isOpen">
+    <p>Delete {{contact.name | titlecase }} from your contact list?</p>
+
+    <div class="action">
+        <button class="btn btn-gray" (click)="handleModal()">Cancel</button>
+        <button class="btn btn-secondary" (click)="onDelete()">Delete</button>
+    </div>
+</div>

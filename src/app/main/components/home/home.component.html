@@ -1,0 +1,24 @@
+<section class="home">
+    <div class="title">
+        <h2>Contacts</h2>
+        <button (click)="addContact()" class="btn btn-light with-icon"><img src="assets/icons/add.svg" alt=""> Add
+      new</button>
+    </div>
+    <div class="content">
+        <ul class="contacts">
+            <li *ngFor="let item of items">
+                <a href="" (click)="openProfile($event,item)">
+                    <img class="avatar" src="{{item.avatar}}" alt="">
+                    <div>
+                        <span class="text-bold">{{item.name | titlecase}}</span>
+                        <span class="text-muted">{{item.phone}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <app-contact-form [contact]="selectedItem" [isOpen]="isOpenForm" (isClose)="handleForm($event)" (isSubmitted)="handleSubmit($event)"></app-contact-form>
+    <app-profile [isOpen]="isOpenProfile" (isOpenForm)="handleForm($event)" (isOpenDelete)="handleDelete($event)" (isClose)="handleProfile($event)"></app-profile>
+    <app-contact-delete [contact]="selectedItem" [isOpen]="isOpenDelete" (isClose)="handleDelete($event)" (isSubmitted)="handleDeleteSubmit($event)">
+    </app-contact-delete>
+</section>

@@ -1,0 +1,48 @@
+.profile {
+    position: absolute;
+    top: 62px;
+    z-index: 1;
+    width: stretch;
+    height: calc(100vh - 67px);
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-light);
+    .header {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            margin-bottom: .8rem;
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+    }
+    .body {
+        margin-top: 1rem;
+        .body-title {
+            display: flex;
+            align-items: center;
+            h5 {
+                font-size: 1rem;
+                margin-right: auto;
+            }
+        }
+        div.field {
+            display: flex;
+            margin: 1rem 0;
+            align-items: center;
+            img {
+                width: 25px;
+                height: 25px;
+                margin-right: 1rem;
+            }
+        }
+    }
+}

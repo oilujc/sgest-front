@@ -1,0 +1,33 @@
+<div class="profile" @slide *ngIf="isOpen">
+    <div class="header">
+        <button (click)="handleModal()" class="btn with-icon"><img src="assets/icons/close.svg" alt=""></button>
+    </div>
+    <div class="avatar">
+        <img src="{{contact.avatar}}" alt="">
+    </div>
+    <div class="title">
+        <h3>{{contact.name | titlecase }}</h3>
+        <h4 class="text-muted">{{contact.phone}}</h4>
+    </div>
+    <div class="body">
+        <div class="body-title">
+            <h5 class="text-muted">Other details</h5>
+            <button (click)="openForm()" class="btn with-icon"><img src="assets/icons/edit.svg" alt=""> Edit</button>
+            <button (click)="openDelete()" class="btn with-icon"><img src="assets/icons/trash.svg" alt=""> Delete</button>
+        </div>
+        <div class="field">
+            <img src="assets/icons/phone.svg" alt="">
+            <div class="">
+                <span class="text-muted">Phone number:</span>
+                <p> {{contact.phone}}</p>
+            </div>
+        </div>
+        <div class="field">
+            <img src="assets/icons/email.svg" alt="">
+            <div class="">
+                <span class="text-muted">Email:</span>
+                <p> {{contact.email}}</p>
+            </div>
+        </div>
+    </div>
+</div>

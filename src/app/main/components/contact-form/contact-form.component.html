@@ -1,0 +1,26 @@
+<div class="contact-form" @slide *ngIf="isOpen">
+    <div class="header">
+        <h2>{{getTitle()}}</h2>
+        <button (click)="handleModal()" class="btn with-icon"><img src="assets/icons/close.svg" alt=""></button>
+    </div>
+    <div class="avatar">
+        <img src="{{getAvatar()}}" alt="">
+    </div>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" formControlName="phone">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" formControlName="email">
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+    </form>
+</div>

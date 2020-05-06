@@ -1,0 +1,15 @@
+.contact-form {
+    position: absolute;
+    top: 62px;
+    z-index: 2;
+    width: stretch;
+    height: calc(100vh - 67px);
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-light);
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+}

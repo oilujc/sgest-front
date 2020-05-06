@@ -1,1 +1,148 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    /* Colors */
+    --foreground-default: #242424;
+    --foreground-secondary: #484848;
+    --background-default: #F0F0F0;
+    --background-secondary: #E8E8E8;
+    --background-light: #F7F7F7;
+    --primary-default: #35A7FF;
+    --primary-dark: #2A88DB;
+    --primary-light: #4EB9FF;
+    --secondary-default: #FF5964;
+    --secondary-dark: #DB4750;
+    --secondary-light: #FF7078;
+}
+
+body {
+    background-color: var(--background-default);
+    width: 60%;
+    margin: auto;
+}
+
+* {
+    color: var(--foreground-default);
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+
+h4 {
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 550;
+}
+
+h5 {
+    margin: 0;
+    font-size: .7rem;
+    font-weight: 550;
+}
+
+form {
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        input {
+            padding: .5rem;
+            border: none;
+            border-radius: 15px;
+            background-color: var(--background-default);
+        }
+    }
+    .form-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin: 1rem 0;
+    }
+}
+
+button.btn {
+    padding: .5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    &.btn-primary {
+        color: var(--background-default);
+        background-color: var(--primary-default);
+    }
+    &.btn-secondary {
+        color: var(--background-default);
+        background-color: var(--secondary-default);
+    }
+    &.btn-gray {
+        color: var(--background-default);
+        background-color: var(--foreground-secondary);
+    }
+    &.btn-light {
+        background-color: var(--background-light);
+    }
+    &.with-icon {
+        img {
+            width: 10px;
+            height: 10px;
+        }
+    }
+    &:focus {
+        outline: none;
+        border: transparent;
+    }
+}
+
+div.avatar {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    img {
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+img.avatar {
+    border-radius: 100%;
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.text-muted {
+    color: var(--foreground-secondary);
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+@media (max-width: 425px) {
+    body {
+        width: 100%;
+    }
+}
